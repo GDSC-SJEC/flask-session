@@ -1,8 +1,15 @@
 from flask import Flask, render_template, redirect, url_for, request
 import sqlite3
 import os
+# from flask_mysqldb import MySQL
 
 app = Flask(__name__)
+
+# mysql = MySQL(app)
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = 'root'
+# app.config['MYSQL_DB'] = 'MyDB'
 
 def createDatabase():
     conn = sqlite3.connect("movieDB.db")
